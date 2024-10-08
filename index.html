@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Gorras Sway</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Estilo del banner */
+        .banner {
+            background-image: url('https://via.placeholder.com/1200x300'); /* Cambia esta URL por tu imagen */
+            background-size: cover;
+            color: #fff;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .banner:hover {
+            transform: scale(1.05);
+        }
+
+        .banner h2 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .product {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: scale(1.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .buy-button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Banner de contacto */
+        footer {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sway - Tienda de Gorras Urbanas</h1>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h2>Explora nuestras gorras</h2>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 1">
+            <h3>Gorra Snapback</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 2">
+            <h3>Gorra Trucker</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 3 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 3">
+            <h3>Gorra Beisbolera</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 4 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 4">
+            <h3>Gorra Negra</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 5 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 5">
+            <h3>Gorra Blanca</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 6 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 6">
+            <h3>Gorra Roja</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 7 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 7">
+            <h3>Gorra Verde</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 8 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 8">
+            <h3>Gorra Azul</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 9 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 9">
+            <h3>Gorra Amarilla</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+        <!-- Producto 10 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Gorra 10">
+            <h3>Gorra Gris</h3>
+            <a href="https://www.printful.com" target="_blank">
+                <button class="buy-button">Comprar</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Sway. Todos los derechos reservados.</p>
+        <a href="https://www.instagram.com" target="_blank" style="color: white;">Contáctanos en Instagram</a>
+    </footer>
+
+    <script>
+        // Eliminar la ventana emergente
+        function showDetails(productId) {
+            // Sin acción definida
+        }
+    </script>
+</body>
+</html>
