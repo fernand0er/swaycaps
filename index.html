@@ -3,277 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Virtual de Ropa</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            margin: 0;
-        }
-
-        header img {
-            width: 50px;
-            height: 50px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .banner {
-            background-image: url('https://via.placeholder.com/1200x400');
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2.5rem;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .search-bar input {
-            padding: 10px;
-            width: 300px;
-            font-size: 1rem;
-        }
-
-        .search-bar button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .product {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product h3 {
-            margin: 15px 0;
-        }
-
-        .product button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .product button:hover {
-            background-color: #0056b3;
-        }
-
-        .cart {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .cart p {
-            margin: 5px 0;
-        }
-
-        .blog-section {
-            margin-top: 50px;
-        }
-
-        .blog-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .blog-section .post {
-            margin-bottom: 30px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .blog-section .post h3 {
-            margin-top: 0;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .product img {
-                height: 150px;
-            }
-
-            .banner {
-                font-size: 2rem;
-                height: 200px;
-            }
-
-            header h1 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda Online</title>
 </head>
 <body>
-
     <header>
-        <img src="https://via.placeholder.com/50" alt="Logo de la tienda">
-        <h1>Tienda de Ropa</h1>
-        <nav>
-            <a href="#productos">Tienda</a>
-            <a href="#blog">Blog</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <h1>Mi Tienda Online</h1>
+        <div id="cart">
+            <button id="cart-button">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
     </header>
-
-    <div class="banner">
-        ¡Bienvenidos a nuestra tienda de ropa urbana!
-    </div>
-
-    <!-- Buscador -->
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Buscar gorras...">
-            <button onclick="buscarProducto()">Buscar</button>
+    
+    <main>
+        <div class="product" data-id="1" data-name="Producto 1" data-price="10">
+            <h2>Producto 1</h2>
+            <p>Precio: $10</p>
+            <button class="add-to-cart">Añadir al carrito</button>
         </div>
-
-        <!-- Lista de productos -->
-        <div id="productos" class="product-list">
-            <div class="product" data-name="gorra snapback">
-                <img src="https://via.placeholder.com/200" alt="Gorra Snapback">
-                <h3>Gorra Snapback</h3>
-                <p>$25.00</p>
-                <button onclick="agregarAlCarrito('Gorra Snapback', 25)">Agregar al carrito</button>
-            </div>
-            <div class="product" data-name="gorra trucker">
-                <img src="https://via.placeholder.com/200" alt="Gorra Trucker">
-                <h3>Gorra Trucker</h3>
-                <p>$20.00</p>
-                <button onclick="agregarAlCarrito('Gorra Trucker', 20)">Agregar al carrito</button>
-            </div>
-            <!-- Más productos aquí... -->
+        <div class="product" data-id="2" data-name="Producto 2" data-price="15">
+            <h2>Producto 2</h2>
+            <p>Precio: $15</p>
+            <button class="add-to-cart">Añadir al carrito</button>
         </div>
+        <!-- Agrega más productos aquí -->
+    </main>
 
-        <!-- Carrito de compras -->
-        <div id="carrito" class="cart">
-            <h3>Carrito de compras</h3>
-            <div id="cart-items"></div>
-            <p>Total: $<span id="total">0</span></p>
-        </div>
-
-        <!-- Sección del blog -->
-        <div id="blog" class="blog-section">
-            <h2>Blog Personal</h2>
-            <div class="post">
-                <h3>Últimas tendencias en moda urbana</h3>
-                <p>Explora lo último en tendencias y looks de moda urbana para esta temporada.</p>
-            </div>
-            <div class="post">
-                <h3>Cómo elegir la gorra perfecta</h3>
-                <p>Consejos para encontrar la gorra ideal que se ajuste a tu estilo.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer id="contacto">
-        <p>Contáctanos en nuestras redes sociales | Tienda de Ropa © 2024</p>
-    </footer>
-
-    <script>
-        let carrito = [];
-        let total = 0;
-
-        function agregarAlCarrito(producto, precio) {
-            carrito.push({ producto, precio });
-            total += precio;
-            mostrarCarrito();
-        }
-
-        function mostrarCarrito() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
-            carrito.forEach((item, index) => {
-                cartItems.innerHTML += `<p>${item.producto} - $${item.precio} <button onclick="eliminarDelCarrito(${index})">X</button></p>`;
-            });
-            document.getElementById('total').innerText = total;
-        }
-
-        function eliminarDelCarrito(index) {
-            total -= carrito[index].precio;
-            carrito.splice(index, 1);
-            mostrarCarrito();
-        }
-
-        function buscarProducto() {
-            const search = document.getElementById('search').value.toLowerCase();
-            const products = document.querySelectorAll('.product');
-            products.forEach(product => {
-                const name = product.getAttribute('data-name').toLowerCase();
-                if (name.includes(search)) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
 
